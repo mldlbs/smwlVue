@@ -14,6 +14,5 @@ smVue是二三维开发框架。
 ## 2. supermapwl
 
 # 许可
-
-[Apache License 2.0](https://github.com/SuperMap/SuperMap-iEarth/blob/master/LICENSE)
+[MIT License](https://github.com/mldlbs/supermapwl/blob/master/LICENSE)
 
