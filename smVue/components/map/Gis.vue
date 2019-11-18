@@ -45,6 +45,7 @@
           main['mapEvent'].changeMap(this.tag);
         }
       }
+
     },
     components: {
       MAP2D, MAP3D, SwitchMap

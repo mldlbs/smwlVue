@@ -5,6 +5,7 @@ define(function (require, exports, module) {
   let mapEvent = {};
   let service = require("./config"); //加载地图
   let iMap = require("../libs/supermap/iclient-leaflet/mapUtils.js");
+
   /**
    * 初始化地图
    * @returns {*}
