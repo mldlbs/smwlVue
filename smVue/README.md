@@ -1,6 +1,6 @@
 <br/>
 <div align="center">
-  <img src="./assets/img/earth.png" height="60">
+  <img src="https://github.com/mldlbs/supermapwl/blob/master/smVue/assets/earth.png?raw=true" height="60">
 </div>
 <br/>
 <div align="center">
