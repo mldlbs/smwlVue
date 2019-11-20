@@ -6,34 +6,33 @@
   </div>
 </template>
 <script>
-    import { mapState, mapMutations } from 'vuex';
-    import m from '~/assets/img/map/m.png';
-    import i from '~/assets/img/map/i.png';
-    import s from '~/assets/img/map/s.png';
+  import {mapState, mapMutations} from 'vuex';
+  import m from '~/assets/img/map/m.png';
+  import i from '~/assets/img/map/i.png';
+  import s from '~/assets/img/map/s.png';
 
-    export default {
-        data() {
-            return {
-                images: [m, i, s]
-            }
-        },
-        mounted() {
-        },
-        computed: {
-            ...mapState({
-                TAG: state => state.Gis.TAG
-            })
-        },
-        methods:{
-            ...mapMutations([
-                'CHANGE_TAG'
-            ]),
-            switchView(index) {
-                this.CHANGE_TAG(index);
-                console.log(this.TAG);
-            },
-        }
+  export default {
+    data() {
+      return {
+        images: [m, i, s]
+      }
+    },
+    mounted() {
+    },
+    computed: {
+      ...mapState({
+        TAG: state => state.Gis.TAG
+      })
+    },
+    methods: {
+      ...mapMutations([
+        'CHANGE_TAG'
+      ]),
+      switchView(index) {
+        this.CHANGE_TAG(index);
+      },
     }
+  }
 </script>
 <style>
   .switch {
@@ -51,6 +50,8 @@
     width: 48px;
     height: 48px;
     cursor: pointer;
+    padding: 1px;
+    background: #8f4b4b;
   }
 
 </style>

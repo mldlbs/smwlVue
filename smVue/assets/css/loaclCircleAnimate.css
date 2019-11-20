@@ -1,0 +1,94 @@
+.wave {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+}
+
+.wave .circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.wave .solidCircle{
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.1);
+  opacity: 1;
+}
+
+/* 波动效果 */
+.wave.solid .circle{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.wave.solid .circle:first-child {
+  animation: circle-opacity 3s infinite;
+}
+
+.wave.solid .circle:nth-child(2) {
+  animation: circle-opacity 3s infinite;
+  animation-delay: .5s;
+}
+.wave.solid .circle:nth-child(3) {
+  animation: circle-opacity 3s infinite;
+  animation-delay: 1.0s;
+}
+
+.wave.solid.red {
+  color: red;
+}
+
+.wave.solid.red .circle{
+  background: red;
+}
+
+.wave.solid.red .solidCircle{
+  background: red;
+}
+
+.wave.solid.orange {
+  color: orange;
+}
+
+.wave.solid.orange .circle{
+  background: orange;
+}
+
+.wave.solid.orange .solidCircle{
+  background: orange;
+}
+
+.wave.solid.yellow {
+  color: yellow;
+}
+
+.wave.solid.yellow .circle{
+  background: yellow;
+}
+
+.wave.solid.yellow .solidCircle{
+  background: yellow;
+}
+
+.wave.solid.blue {
+  color: blue;
+}
+
+.wave.solid.blue .circle{
+  background: blue;
+}
+
+.wave.solid.blue .solidCircle{
+  background: blue;
+}
+
+@keyframes circle-opacity{
+  0% {opacity: 1;transform: scale(0.1);}
+  100% {opacity: 0;transform: scale(1);}
+}

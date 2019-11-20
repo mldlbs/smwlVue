@@ -20,6 +20,7 @@ define(function (require, exports, module) {
       layerId: 'yx'
     };
     mapEvent.map = iMap.initMap(cfg);
+    iMap.utils.measure.initMeasure(mapEvent.map);
   };
 
   /**
@@ -40,6 +41,18 @@ define(function (require, exports, module) {
         L.supermap.tiledMapLayer(service.mapYXUrl, {id: 'yx'}).addTo(mapEvent.map);
         break;
     }
+  };
+  /**
+   * 量算
+   * @param type
+   */
+  mapEvent.doMeasure = function (type) {
+    if(type){
+      iMap.utils.measure.activateMeasure2DControl(type);
+    }else{
+      iMap.utils.measure.clear()
+    }
+
   };
 
   module.exports = mapEvent;

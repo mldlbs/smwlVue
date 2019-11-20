@@ -3,6 +3,7 @@
     <MAP2D ref="map2d" v-show="tag === 0 || tag === 1"/>
     <MAP3D v-show="tag === 2"/>
     <SwitchMap/>
+    <Tools/>
   </div>
 </template>
 <script>
@@ -10,6 +11,7 @@
   import MAP2D from '~/components/map/Map2D.vue'
   import MAP3D from '~/components/map/Map3D.vue'
   import SwitchMap from '~/components/map/Switch.vue'
+  import Tools from '~/components/map/Tools.vue'
   import {mapState, mapMutations} from 'vuex';
 
   export default {
@@ -38,6 +40,9 @@
         tag: 0
       }
     },
+    components: {
+      MAP2D, MAP3D, SwitchMap, Tools
+    },
     watch: {
       'Gis.TAG'() {
         this.tag = this.Gis.TAG;
@@ -46,9 +51,6 @@
         }
       }
 
-    },
-    components: {
-      MAP2D, MAP3D, SwitchMap
     },
     mounted: function () {
     },

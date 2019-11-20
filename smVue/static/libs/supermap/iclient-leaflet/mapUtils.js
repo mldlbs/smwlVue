@@ -4,6 +4,7 @@
  */
 define(function (require, exports, module) {
   let utils = {};
+  utils.measure = require('./utils/measure.js');
   utils.query = require('./utils/query.js');
   utils.theme = require('./utils/themeLayer.js');
 
