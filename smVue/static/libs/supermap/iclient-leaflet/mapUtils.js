@@ -14,7 +14,7 @@ define(function (require, exports, module) {
    */
   function initMap(cfg) {
     let baseMap = L.map('map2d', {
-      crs: cfg.crs,
+      //crs: cfg.crs,
       center: cfg.center,
       maxZoom: cfg.maxZoom,
       zoom: cfg.zoom,

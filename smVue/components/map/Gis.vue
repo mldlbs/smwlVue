@@ -1,7 +1,7 @@
 <template>
   <div id="map" class="map">
-    <MAP2D ref="map2d" v-show="tag === 0 || tag === 1"/>
-    <MAP3D v-show="tag === 2"/>
+    <MAP2D ref="map2d" v-show="tag !== 3"/>
+    <MAP3D v-show="tag === 3"/>
     <SwitchMap/>
     <Tools/>
   </div>
@@ -47,11 +47,10 @@
     watch: {
       'Gis.TAG'() {
         this.tag = this.Gis.TAG;
-        if (this.tag !== 2) {
+        if (this.tag !== 3) {
           main['mapEvent'].changeMap(this.tag);
         }
       }
-
     },
     mounted: function () {
     },

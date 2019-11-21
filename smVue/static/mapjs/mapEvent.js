@@ -36,17 +36,18 @@ define(function (require, exports, module) {
     });
     switch (tag) {
       case 0:
-        L.supermap.tiledMapLayer(service.mapSLUrl, {id: 'sl'}).addTo(mapEvent.map);
-        break;
-      case 1:
-        L.supermap.tiledMapLayer(service.mapYXUrl, {id: 'yx', prjCoordSys: {"epsgCode": 3857}}).addTo(mapEvent.map);
-        break;
-      case 3:
         L.tileLayer.chinaProvider('Google.Normal.Map', {
           id: 'gnm',
           maxZoom: 18,
           minZoom: 5,
+          prjCoordSys: {"epsgCode": 3857}
         }).addTo(mapEvent.map);
+        break;
+      case 1:
+        L.supermap.tiledMapLayer(service.mapSLUrl, {id: 'sl', prjCoordSys: {"epsgCode": 3857}}).addTo(mapEvent.map);
+        break;
+      case 2:
+        L.supermap.tiledMapLayer(service.mapYXUrl, {id: 'yx', prjCoordSys: {"epsgCode": 3857}}).addTo(mapEvent.map);
         break;
     }
   };

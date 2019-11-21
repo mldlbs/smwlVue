@@ -14,7 +14,7 @@
   export default {
     data() {
       return {
-        images: [m, i, s, m]
+        images: [m, m, i, s]
       }
     },
     mounted() {
