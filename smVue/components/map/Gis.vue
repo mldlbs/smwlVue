@@ -25,6 +25,7 @@
       script: [
         {src: '/libs/supermap/iclient-leaflet/libs/leaflet-src.js'},
         {src: '/libs/supermap/iclient-leaflet/libs/iclient9-leaflet-es6.min.js'},
+        {src: '/libs/supermap/iclient-leaflet/libs/leaflet.ChineseTmsProviders.js'},
         {src: '/libs/supermap/turf.min.js'},
         {src: '/libs/supermap/iclient-webgl/Build/Cesium/Cesium.js'},
         /*{src: '/libs/supermap/3d-webgl/Build/Cesium/Workers/zlib.min.js'},*/
