@@ -1,6 +1,6 @@
 <template>
   <div id="map" class="map">
-    <MAP2D ref="map2d" v-show="tag === 0 || tag === 1"/>
+    <MAP2D ref="map2d" v-show="tag !== 2"/>
     <MAP3D v-show="tag === 2"/>
     <SwitchMap/>
     <Tools/>
