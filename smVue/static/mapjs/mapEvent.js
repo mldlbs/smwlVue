@@ -28,32 +28,72 @@ define(function (require, exports, module) {
    * @param tag
    */
   mapEvent.changeMap = function (tag) {
-    console.log(tag);
+    let lNames = ['yx', 'sl', 'gnm', 'gsm', 'gtm', 'tnm', 'tsm', 'ttm', 'gdnm', 'gdsm', 'geonm', 'geotm'];
     mapEvent.map.eachLayer((layer) => {
-      if (layer.options.id === 'yx' || layer.options.id === 'sl' || layer.options.id === 'gnm') {
-        layer.remove();
-      }
+      lNames.forEach((item) => {
+        if (layer.options.id === item) {
+          layer.remove();
+        }
+      });
     });
     switch (tag) {
       case 0:
-        L.tileLayer.chinaProvider('Google.Normal.Map', {
-          id: 'gnm',
-          maxZoom: 18,
-          minZoom: 5,
-          prjCoordSys: {"epsgCode": 3857}
-        }).addTo(mapEvent.map);
-        break;
-      case 1:
         L.supermap.tiledMapLayer(service.mapSLUrl, {id: 'sl', prjCoordSys: {"epsgCode": 3857}}).addTo(mapEvent.map);
         break;
-      case 2:
+      case 1:
         L.supermap.tiledMapLayer(service.mapYXUrl, {id: 'yx', prjCoordSys: {"epsgCode": 3857}}).addTo(mapEvent.map);
         break;
       case 3:
         L.tileLayer.chinaProvider('Google.Normal.Map', {
           id: 'gnm',
-          maxZoom: 18,
-          minZoom: 5,
+          prjCoordSys: {"epsgCode": 3857}
+        }).addTo(mapEvent.map);
+        break;
+      case 4:
+        L.tileLayer.chinaProvider('Google.Satellite.Map', {
+          id: 'gsm',
+          prjCoordSys: {"epsgCode": 3857}
+        }).addTo(mapEvent.map);
+        break;
+      case 5:
+        L.tileLayer.chinaProvider('TianDiTu.Normal.Map', {
+          id: 'tnm',
+          prjCoordSys: {"epsgCode": 3857}
+        }).addTo(mapEvent.map);
+        break;
+      case 7:
+        L.tileLayer.chinaProvider('TianDiTu.Satellite.Map', {
+          id: 'tsm',
+          prjCoordSys: {"epsgCode": 3857}
+        }).addTo(mapEvent.map);
+        break;
+      case 8:
+        L.tileLayer.chinaProvider('TianDiTu.Terrain.Map', {
+          id: 'ttm',
+          prjCoordSys: {"epsgCode": 3857}
+        }).addTo(mapEvent.map);
+        break;
+      case 9:
+        L.tileLayer.chinaProvider('GaoDe.Normal.Map', {
+          id: 'gdnm',
+          prjCoordSys: {"epsgCode": 3857}
+        }).addTo(mapEvent.map);
+        break;
+      case 10:
+        L.tileLayer.chinaProvider('GaoDe.Satellite.Map', {
+          id: 'gdsm',
+          prjCoordSys: {"epsgCode": 3857}
+        }).addTo(mapEvent.map);
+        break;
+      case 11:
+        L.tileLayer.chinaProvider('Geoq.Normal.Map', {
+          id: 'geonm',
+          prjCoordSys: {"epsgCode": 3857}
+        }).addTo(mapEvent.map);
+        break;
+      case 12:
+        L.tileLayer.chinaProvider('Geoq.Normal.Warm', {
+          id: 'geotm',
           prjCoordSys: {"epsgCode": 3857}
         }).addTo(mapEvent.map);
         break;

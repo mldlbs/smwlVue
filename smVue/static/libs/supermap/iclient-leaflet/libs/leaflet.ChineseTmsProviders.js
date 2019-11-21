@@ -50,7 +50,7 @@ L.TileLayer.ChinaProvider.providers = {
     },
     Subdomains: []
   },
-
+  //智图
   Geoq: {
     Normal: {
       Map: "http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineCommunity/MapServer/tile/{z}/{y}/{x}",
