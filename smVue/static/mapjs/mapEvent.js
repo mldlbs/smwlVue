@@ -29,7 +29,7 @@ define(function (require, exports, module) {
    */
   mapEvent.changeMap = function (tag) {
     mapEvent.map.eachLayer((layer) => {
-      if (layer.options.id === 'yx' || layer.options.id === 'sl') {
+      if (layer.options.id === 'yx' || layer.options.id === 'sl' || layer.options.id === 'gnm') {
         layer.remove();
       }
     });
@@ -40,6 +40,14 @@ define(function (require, exports, module) {
       case 1:
         L.supermap.tiledMapLayer(service.mapYXUrl, {id: 'yx'}).addTo(mapEvent.map);
         break;
+      case 3:
+        L.tileLayer.chinaProvider('Google.Normal.Map', {
+          id: 'gnm',
+          maxZoom: 18,
+          minZoom: 5,
+          prjCoordSys: {"epsgCode": 3857}
+        }).addTo(mapEvent.map);
+        break;
     }
   };
   /**
@@ -47,9 +55,9 @@ define(function (require, exports, module) {
    * @param type
    */
   mapEvent.doMeasure = function (type) {
-    if(type){
+    if (type) {
       iMap.utils.measure.activateMeasure2DControl(type);
-    }else{
+    } else {
       iMap.utils.measure.clear()
     }
 
