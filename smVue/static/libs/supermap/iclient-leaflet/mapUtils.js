@@ -14,15 +14,15 @@ define(function (require, exports, module) {
    */
   function initMap(cfg) {
     let baseMap = L.map('map2d', {
-      crs: cfg.crs,
+      //crs: cfg.crs,
       center: cfg.center,
       maxZoom: cfg.maxZoom,
       zoom: cfg.zoom,
-      attributionControl: false
+      //attributionControl: false
     });
     //SuperMap.SecurityManager.destroyToken(conf.tokenMapUrl);
     //SuperMap.SecurityManager.registerToken(conf.tokenMapUrl, "ikdd9qBASQK_zTWmV2HlQmkieb5ejPFqY56RPYCVi8rmXLsLuAj81PlFWQadn_qp86ldSPgcQws7KJjFd_reFw..");
-    L.supermap.tiledMapLayer(cfg.url, {id: cfg.layerId}).addTo(baseMap);
+    L.supermap.tiledMapLayer(cfg.url, {id: cfg.layerId, prjCoordSys: {"epsgCode": 3857}}).addTo(baseMap);
     return baseMap;
   }
 

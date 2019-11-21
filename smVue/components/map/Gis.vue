@@ -1,6 +1,6 @@
 <template>
   <div id="map" class="map">
-    <MAP2D ref="map2d" v-show="tag !== 2"/>
+    <MAP2D ref="map2d" v-show="tag === 0 || tag === 1"/>
     <MAP3D v-show="tag === 2"/>
     <SwitchMap/>
     <Tools/>
@@ -25,6 +25,7 @@
       script: [
         {src: '/libs/supermap/iclient-leaflet/libs/leaflet-src.js'},
         {src: '/libs/supermap/iclient-leaflet/libs/iclient9-leaflet-es6.min.js'},
+        {src: '/libs/supermap/iclient-leaflet/libs/leaflet.ChineseTmsProviders.js'},
         {src: '/libs/supermap/turf.min.js'},
         {src: '/libs/supermap/iclient-webgl/Build/Cesium/Cesium.js'},
         /*{src: '/libs/supermap/3d-webgl/Build/Cesium/Workers/zlib.min.js'},*/

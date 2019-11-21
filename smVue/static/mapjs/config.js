@@ -6,13 +6,15 @@ define(function (require, exports, module) {
   let iServer = host + "/iserver/services/";
 
   module.exports = {
-      /**影像底图*/
-      mapYXUrl: iServer + "map-world/rest/maps/World",
-      /**矢量底图*/
-      mapSLUrl: iServer + "map-china400/rest/maps/China_4326",
-      /**数据服务*/
-      dataUrl: iServer + "data-world/rest/data",
-      /**三维场景*/
-      sceneUrl: "http://www.supermapol.com/realspace/services/3D-CBD/rest/realspace",
+    /**影像底图*/
+    mapYXUrl: iServer + "map-world/rest/maps/World",
+    /**矢量底图*/
+    mapSLUrl: iServer + "map-china400/rest/maps/China",
+    /**矢量底图*/
+    mapDPUrl: iServer + "map-china400/rest/maps/ChinaDark",
+    /**数据服务*/
+    dataUrl: iServer + "data-world/rest/data",
+    /**三维场景*/
+    sceneUrl: "http://www.supermapol.com/realspace/services/3D-CBD/rest/realspace",
   };
 });

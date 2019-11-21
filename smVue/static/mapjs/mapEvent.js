@@ -12,7 +12,7 @@ define(function (require, exports, module) {
    */
   mapEvent.initMap = function () {
     let cfg = {
-      crs: L.CRS.EPSG4326,
+      crs: L.CRS.EPSG3857,
       url: service.mapYXUrl,
       center: [34.265538635253906, 108.16653009033203],
       maxZoom: 18,
@@ -28,6 +28,7 @@ define(function (require, exports, module) {
    * @param tag
    */
   mapEvent.changeMap = function (tag) {
+    console.log(tag);
     mapEvent.map.eachLayer((layer) => {
       if (layer.options.id === 'yx' || layer.options.id === 'sl' || layer.options.id === 'gnm') {
         layer.remove();
@@ -35,10 +36,18 @@ define(function (require, exports, module) {
     });
     switch (tag) {
       case 0:
-        L.supermap.tiledMapLayer(service.mapSLUrl, {id: 'sl'}).addTo(mapEvent.map);
+        L.tileLayer.chinaProvider('Google.Normal.Map', {
+          id: 'gnm',
+          maxZoom: 18,
+          minZoom: 5,
+          prjCoordSys: {"epsgCode": 3857}
+        }).addTo(mapEvent.map);
         break;
       case 1:
-        L.supermap.tiledMapLayer(service.mapYXUrl, {id: 'yx'}).addTo(mapEvent.map);
+        L.supermap.tiledMapLayer(service.mapSLUrl, {id: 'sl', prjCoordSys: {"epsgCode": 3857}}).addTo(mapEvent.map);
+        break;
+      case 2:
+        L.supermap.tiledMapLayer(service.mapYXUrl, {id: 'yx', prjCoordSys: {"epsgCode": 3857}}).addTo(mapEvent.map);
         break;
       case 3:
         L.tileLayer.chinaProvider('Google.Normal.Map', {
@@ -60,7 +69,6 @@ define(function (require, exports, module) {
     } else {
       iMap.utils.measure.clear()
     }
-
   };
 
   module.exports = mapEvent;
