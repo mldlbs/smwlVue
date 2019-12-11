@@ -1,20 +1,22 @@
-# suermapwl
-超图软件   vue + leaflet + webgl 二三维GIS开发
+# smwlVue
 
-# 简介
-supermapwl是基于超图产品搭建的开发框架。
+> NUXT 集成 超图软件 leaflet webgl 等二三维开发框架
 
-## 1. smVue
+## Build Setup
 
-smVue是二三维开发框架。
+``` bash
+# install dependencies
+$ yarn install
 
-二维： iclient-leaflet
-三维： webgl
+# serve with hot reload at localhost:3000
+$ yarn dev
 
+# build for production and launch server
+$ yarn build
+$ yarn start
 
+# generate static project
+$ yarn generate
+```
 
-## 2. supermapwl
-
-# 许可
-[MIT License](https://github.com/mldlbs/supermapwl/blob/master/LICENSE)
-
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
