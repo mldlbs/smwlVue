@@ -27,3 +27,7 @@ body {
     padding: 5px;
     margin-right: 5px;
 }
+
+.leaflet-control-container{
+    display: none;
+}

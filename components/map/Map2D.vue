@@ -2,16 +2,16 @@
   <div id="map2d" />
 </template>
 <script>
-  import main from "~/static/mapjs/main"
+import main from '~/static/mapjs/main'
 
-  export default {
+export default {
   mounted () {
-    // setTimeout(() => {
+    setTimeout(() => {
     // eslint-disable-next-line no-undef,no-console
-    console.log(L, L.supermap, L.tileLayer, Cesium)
-    // eslint-disable-next-line no-undef
-    main.mEvent.initMap(L)
-    // }, 1)
+      console.log(L, L.supermap, L.tileLayer, Cesium)
+      // eslint-disable-next-line no-undef
+      main.mEvent.initMap(L)
+    }, 1)
   },
   methods: {}
 }

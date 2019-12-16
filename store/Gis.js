@@ -1,6 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-const BASE_URL = '/api'
-const state = ({
+const state = () => ({
   TAG: 0,
   POPUP: {
     MAP: null,
@@ -19,6 +17,7 @@ const mutations = {
 const actions = {}
 
 export default {
+  namespace: true,
   state,
   mutations,
   actions

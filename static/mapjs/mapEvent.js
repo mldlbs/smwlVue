@@ -3,20 +3,23 @@
  * 地图功能入口
  */
 import iMap from "../libs/supermap/iclient-leaflet/mapUtils"
+import {initPlot} from "../libs/supermap/iclient-leaflet/utils/plot"
 import service from "./config"
+import plot from "../modules/plot"
 
 // eslint-disable-next-line no-unused-vars
-let bLayer, pulses, mLayer, vecLayers, markers
+let bLayer, pulses, mLayer, vecLayers, markers, pLayer
 export default {
+  plot,
   /**
    * 初始化地图
    * @returns {*}
    */
-  initMap (L) {
-    this.L = L
+  initMap () {
     this.map = iMap.initMap({ center: [38, 106], maxZoom: 18, zoom: 4 })
     this.addLayers()
     iMap.setBaseMap({ url: service.mapSLUrl, id: 'sl', layerGroup: bLayer })
+
     // iMap.utils.measure.initMeasure(this.map)
     this.map.on('click', (e) => {
       // eslint-disable-next-line no-console
@@ -25,14 +28,27 @@ export default {
   },
 
   /**
+   * 初始化动态标绘
+   */
+  initPlot: function (cfg) {
+    initPlot({
+      layerGroup: this.map,
+      url: service.plotUrl,
+      setPlotPanel: cfg.setPlotPanel,
+      setStylePanel: cfg.setStylePanel
+    })
+  },
+
+  /**
    * 添加所有图层
    */
   addLayers () {
-    bLayer = this.L.layerGroup().addTo(this.map).setZIndex(100) // 底图图层
-    vecLayers = this.L.layerGroup().addTo(this.map).setZIndex(200) // 矢量图层
-    markers = this.L.layerGroup().addTo(this.map).setZIndex(300) // marker 图层
-    pulses = this.L.layerGroup().addTo(this.map).setZIndex(350) // 闪烁点图层
-    mLayer = this.L.supermap.turfLayer({
+    bLayer = L.layerGroup().addTo(this.map).setZIndex(100) // 底图图层
+    vecLayers = L.layerGroup().addTo(this.map).setZIndex(200) // 矢量图层
+    markers = L.layerGroup().addTo(this.map).setZIndex(300) // marker 图层
+    pulses = L.layerGroup().addTo(this.map).setZIndex(350) // 闪烁点图层
+    pLayer = L.layerGroup().addTo(this.map).setZIndex(360) // 标绘图层
+    mLayer = L.supermap.turfLayer({
       attribution: '',
       style () {
         return {
@@ -43,7 +59,7 @@ export default {
           weight: 6
         }
       }
-    }).addTo(this.map).setZIndex(400) // 标绘图层
+    }).addTo(this.map).setZIndex(400) // 量算图层
     // iMap.utils.measure.initMeasure(this.map, mLayer, vecLayers);
   },
 

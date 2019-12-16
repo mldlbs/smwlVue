@@ -1,10 +1,11 @@
-/* eslint-disable */
+/*eslint-disable*/
 /**
  * 二维leaflet工具类
  */
-import measure from "./utils/measure"
-import query from "./utils/query"
-import themeLayer from "./utils/themeLayer"
+import measure from './utils/measure'
+import query from './utils/query'
+import themeLayer from './utils/themeLayer'
+import {init} from './utils/plot'
 
 export default {
   measure,
@@ -21,8 +22,8 @@ export default {
       // crs: cfg.crs,
       center: cfg.center,
       maxZoom: cfg.maxZoom,
-      zoom: cfg.zoom
-      // attributionControl: false
+      zoom: cfg.zoom,
+      attributionControl: false
     })
   },
 

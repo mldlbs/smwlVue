@@ -23,15 +23,18 @@
         >
           GitHub
         </a>
+        <n-link to="/gis" no-prefetch class="button--grey">
+          EXAMPLES
+        </n-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import Logo from "~/components/Logo.vue"
+import Logo from '~/components/Logo.vue'
 
-  export default {
+export default {
   components: {
     Logo
   }

@@ -1,8 +1,5 @@
-import Vue from "vue"
-import Vuex from "vuex"
-import Gis from "./Gis"
-
-Vue.use(Vuex)
+import Vuex from 'vuex'
+import Gis from './Gis'
 
 const dataStore = () => {
   return new Vuex.Store({

@@ -1,7 +1,7 @@
 /**
  * 三维webgl工具类
  */
-import measure from "./utils/measure"
+import measure from './utils/measure'
 
 export default {
   measure,

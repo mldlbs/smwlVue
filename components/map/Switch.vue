@@ -15,12 +15,12 @@
   </div>
 </template>
 <script>
-  import {mapMutations, mapState} from "vuex"
-  import m from "~/assets/img/map/m.png"
-  import i from "~/assets/img/map/i.png"
-  import s from "~/assets/img/map/s.png"
+import { mapMutations, mapState } from 'vuex'
+import m from '~/assets/img/map/m.png'
+import i from '~/assets/img/map/i.png'
+import s from '~/assets/img/map/s.png'
 
-  export default {
+export default {
   data () {
     return {
       images: [m, i, s],

@@ -1,8 +1,8 @@
 /**
  * 场景功能入口
  */
-import iScene from "../libs/supermap/iclient-webgl/sceneUtils"
-import service from "./config"
+import iScene from '../libs/supermap/iclient-webgl/sceneUtils'
+import service from './config'
 
 export default {
   iScene,

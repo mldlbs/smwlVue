@@ -11,10 +11,10 @@
   </div>
 </template>
 <script>
-  // eslint-disable-next-line no-unused-vars
-  import {mapState} from "vuex"
+// eslint-disable-next-line no-unused-vars
+import { mapState } from 'vuex'
 
-  export default {
+export default {
   components: {},
   data () {
     return {

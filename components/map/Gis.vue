@@ -7,14 +7,14 @@
   </div>
 </template>
 <script>
-  import {mapState} from "vuex"
-  import main from "~/static/mapjs/main"
-  import MAP2D from "~/components/map/Map2D.vue"
-  import MAP3D from "~/components/map/Map3D.vue"
-  import SwitchMap from "~/components/map/Switch.vue"
-  import Tools from "~/components/map/Tools.vue"
+import { mapState } from 'vuex'
+import main from '~/static/mapjs/main'
+import MAP2D from '~/components/map/Map2D.vue'
+import MAP3D from '~/components/map/Map3D.vue'
+import SwitchMap from '~/components/map/Switch.vue'
+import Tools from '~/components/map/Tools.vue'
 
-  export default {
+export default {
   components: {
     MAP2D, MAP3D, SwitchMap, Tools
   },

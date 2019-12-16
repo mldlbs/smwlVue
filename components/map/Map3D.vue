@@ -2,11 +2,13 @@
   <div id="map3d" />
 </template>
 <script>
-  import main from "~/static/mapjs/main"
+import main from '~/static/mapjs/main'
 
-  export default {
+export default {
   mounted () {
-    main.sEvent.initScene()
+    setTimeout(() => {
+      main.sEvent.initScene()
+    }, 3000)
   }
 }
 </script>

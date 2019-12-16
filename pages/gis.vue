@@ -1,19 +1,13 @@
 <template>
   <div class="container">
-    <div>
-      <Main />
-    </div>
+    <div />
   </div>
 </template>
 
 <script>
-  import Main from "~/components/Main.vue"
-  // eslint-disable-next-line no-unused-vars
-
-  export default {
+export default {
   layout: 'Gis',
   components: {
-    Main
   },
   mounted () {
     // this.initData()
