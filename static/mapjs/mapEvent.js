@@ -2,6 +2,8 @@
 /**
  * 地图功能入口
  */
+import L from 'leaflet';
+import {turfLayer} from '@supermap/iclient-leaflet';
 import iMap from "../libs/supermap/iclient-leaflet/mapUtils"
 import {initPlot} from "../libs/supermap/iclient-leaflet/utils/plot"
 import service from "./config"
@@ -19,12 +21,6 @@ export default {
     this.map = iMap.initMap({ center: [38, 106], maxZoom: 18, zoom: 4 })
     this.addLayers()
     iMap.setBaseMap({ url: service.mapSLUrl, id: 'sl', layerGroup: bLayer })
-
-    // iMap.utils.measure.initMeasure(this.map)
-    this.map.on('click', (e) => {
-      // eslint-disable-next-line no-console
-      console.log(e.latlng)
-    })
   },
 
   /**
@@ -48,7 +44,7 @@ export default {
     markers = L.layerGroup().addTo(this.map).setZIndex(300) // marker 图层
     pulses = L.layerGroup().addTo(this.map).setZIndex(350) // 闪烁点图层
     pLayer = L.layerGroup().addTo(this.map).setZIndex(360) // 标绘图层
-    mLayer = L.supermap.turfLayer({
+    mLayer = turfLayer({
       attribution: '',
       style () {
         return {

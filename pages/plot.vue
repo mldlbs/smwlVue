@@ -60,7 +60,7 @@ export default {
   },
   mounted () {
     setTimeout(() => {
-      this.initPlot()
+      // this.initPlot()
     }, 100)
   },
   methods: {
@@ -229,4 +229,5 @@ export default {
     background-color: rgba(0, 16, 47, .7);
     color: #dddddd;
   }
+
 </style>

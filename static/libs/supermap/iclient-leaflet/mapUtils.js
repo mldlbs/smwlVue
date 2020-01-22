@@ -2,6 +2,7 @@
 /**
  * 二维leaflet工具类
  */
+import {tiledMapLayer} from '@supermap/iclient-leaflet';
 import measure from './utils/measure'
 import query from './utils/query'
 import themeLayer from './utils/themeLayer'
@@ -77,7 +78,7 @@ export default {
   addLayer (cfg) {
     if (this.verifyCfg(cfg, 'addLayer')) {
       cfg.layerGroup.clearLayers()
-      L.supermap.tiledMapLayer(cfg.url).addTo(cfg.layerGroup)
+      tiledMapLayer(cfg.url).addTo(cfg.layerGroup)
     }
   },
 
@@ -88,7 +89,7 @@ export default {
   addLayerGroups (cfg) {
     if (this.verifyCfg(cfg, 'addLayerGroups')) {
       cfg.layerGroup.clearLayers()
-      L.supermap.tiledMapLayer(cfg.url, { cacheEnabled: false, layersID: cfg.layersID }).addTo(cfg.layerGroup)
+      tiledMapLayer(cfg.url, { cacheEnabled: false, layersID: cfg.layersID }).addTo(cfg.layerGroup)
     }
   },
 
@@ -99,7 +100,7 @@ export default {
   setBaseMap (cfg) {
     if (this.verifyCfg(cfg, 'setBaseMap')) {
       cfg.layerGroup.clearLayers()
-      L.supermap.tiledMapLayer(cfg.url, { id: cfg.id, prjCoordSys: cfg.prjCoordSys }).addTo(cfg.layerGroup)
+      tiledMapLayer(cfg.url, { id: cfg.id, prjCoordSys: cfg.prjCoordSys }).addTo(cfg.layerGroup)
     }
   },
 

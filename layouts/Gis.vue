@@ -15,16 +15,15 @@ export default {
       { rel: 'stylesheet', href: '/libs/supermap/iclient-webgl/Build/Cesium/Widgets/widgets.css' }
     ],
     script: [
-      { src: '/libs/supermap/iclient-leaflet/libs/leaflet-src.js' },
-      { src: '/libs/supermap/iclient-leaflet/libs/iclient9-leaflet-es6.min.js' },
-      { src: '/libs/supermap/iclient-leaflet/libs/plotting/iclient9-Plot-leaflet-es6.min.js' },
-      { src: '/libs/supermap/turf.min.js' },
-      { src: '/libs/supermap/iclient-leaflet/libs/leaflet.ChineseTmsProviders.js' },
+      // { src: '/libs/supermap/iclient-leaflet/libs/plotting/iclient9-Plot-leaflet-es6.min.js' },
+      // { src: '/libs/supermap/turf.min.js' },
       { src: '/libs/supermap/iclient-webgl/Build/Cesium/Cesium.js' }
     ]
   },
   components: {
     GIS
+  },
+  mounted () {
   }
 }
 </script>

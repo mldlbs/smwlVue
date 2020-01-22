@@ -4,14 +4,14 @@
       <el-image :src="img" @click="switchView(key)" class="image" fit="fill" />
     </div>
 
-    <div class="images tooltip">
+    <!--<div class="images tooltip">
       <el-image :src="images[0]" class="image" fit="fill" />
       <div class="popup">
         <div v-for="(img, key) in online" class="images">
           <el-image :src="img" @click="switchView(key+3)" class="image" fit="fill" />
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 <script>
@@ -24,7 +24,7 @@ export default {
   data () {
     return {
       images: [m, i, s],
-      online: [m, m, m, m, m, m, m, m, m, m]
+      online: [/* m, m, m, m, m, m, m, m, m, m */]
     }
   },
   computed: {

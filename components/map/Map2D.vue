@@ -6,12 +6,10 @@ import main from '~/static/mapjs/main'
 
 export default {
   mounted () {
-    setTimeout(() => {
     // eslint-disable-next-line no-undef,no-console
-      console.log(L, L.supermap, L.tileLayer, Cesium)
-      // eslint-disable-next-line no-undef
-      main.mEvent.initMap(L)
-    }, 1)
+    // console.log(L, L.supermap, L.tileLayer, Cesium)
+    // eslint-disable-next-line no-undef
+    main.mEvent.initMap(L)
   },
   methods: {}
 }
