@@ -53,7 +53,6 @@ export default {
       console.log('参数不完整！')
     }
   },
-
   /**
    * 获取 marker
    * @param cfg
