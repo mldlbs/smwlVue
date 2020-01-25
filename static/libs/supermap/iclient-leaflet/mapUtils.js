@@ -4,14 +4,9 @@
  */
 import {tiledMapLayer} from '@supermap/iclient-leaflet';
 import measure from './utils/measure'
-import query from './utils/query'
-import themeLayer from './utils/themeLayer'
-import {init} from './utils/plot'
 
 export default {
   measure,
-  query,
-  themeLayer,
   /**
    * 初始化地图
    * @returns {*}

@@ -9,15 +9,12 @@ import GIS from '~/components/map/Gis.vue'
 export default {
   head: {
     link: [
-      { rel: 'stylesheet', href: '/libs/supermap/iclient-leaflet/libs/leaflet.css' },
-      { rel: 'stylesheet', href: '/libs/supermap/iclient-leaflet/libs/plotting/iclient9-Plot-leaflet.css' },
-      { rel: 'stylesheet', href: '/libs/supermap/iclient-leaflet/libs/iclient9-leaflet.min.css' },
-      { rel: 'stylesheet', href: '/libs/supermap/iclient-webgl/Build/Cesium/Widgets/widgets.css' }
+      // { rel: 'stylesheet', href: '/libs/supermap/iclient-leaflet/libs/leaflet.css' },
+      // { rel: 'stylesheet', href: '/libs/supermap/iclient-leaflet/libs/iclient9-leaflet.min.css' },
+      // { rel: 'stylesheet', href: '/libs/supermap/iclient-webgl/Build/Cesium/Widgets/widgets.css' }
     ],
     script: [
-      // { src: '/libs/supermap/iclient-leaflet/libs/plotting/iclient9-Plot-leaflet-es6.min.js' },
-      // { src: '/libs/supermap/turf.min.js' },
-      { src: '/libs/supermap/iclient-webgl/Build/Cesium/Cesium.js' }
+      // { src: '/libs/supermap/iclient-webgl/Build/Cesium/Cesium.js' }
     ]
   },
   components: {

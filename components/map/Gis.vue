@@ -8,7 +8,7 @@
 </template>
 <script>
 import { mapState } from 'vuex'
-import main from '~/static/mapjs/main'
+// import main from '~/static/mapjs/main'
 import MAP2D from '~/components/map/Map2D.vue'
 import MAP3D from '~/components/map/Map3D.vue'
 import SwitchMap from '~/components/map/Switch.vue'
@@ -20,7 +20,7 @@ export default {
   },
   data () {
     return {
-      tag: 0
+      tag: 2
     }
   },
   computed: {
@@ -32,7 +32,7 @@ export default {
     'Gis.TAG' () {
       this.tag = this.Gis.TAG
       if (this.tag !== 2) {
-        main.mEvent.changeMap(this.tag)
+        // main.mEvent.changeMap(this.tag)
       }
     }
   },

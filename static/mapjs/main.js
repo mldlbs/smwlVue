@@ -6,8 +6,5 @@ import sEvent from './sceneEvent'
 
 export default {
   mEvent,
-  sEvent,
-  addMarkersAndEntities (items) {
-    mEvent.addMarkers(items)
-  }
+  sEvent
 }

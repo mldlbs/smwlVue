@@ -9,7 +9,7 @@ export default {
     // eslint-disable-next-line no-undef,no-console
     // console.log(L, L.supermap, L.tileLayer, Cesium)
     // eslint-disable-next-line no-undef
-    main.mEvent.initMap(L)
+    main.mEvent.initMap()
   },
   methods: {}
 }
