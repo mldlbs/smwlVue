@@ -21,8 +21,10 @@
     "leaflet": "^1.6.0",
     "leaflet.chinaprovider": "^0.1.0",
     "nuxt": "^2.0.0",
+    "pako": "^1.0.11",
     "proj4": "^2.5.0",
-    "proj4leaflet": "^1.0.2"
+    "proj4leaflet": "^1.0.2",
+    "three": "^0.112.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
@@ -30,11 +32,11 @@
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
+    "copy-webpack-plugin": "^5.0.4",
     "eslint": "^6.1.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "jest": "^24.1.0",
-    "vue-jest": "^4.0.0-0",
-    "copy-webpack-plugin": "^5.0.4"
+    "vue-jest": "^4.0.0-0"
   },
   "config": {
     "nuxt": {

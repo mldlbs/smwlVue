@@ -2,6 +2,7 @@
   <div id="map" class="map">
     <MAP2D ref="map2d" v-show="tag !== 2" />
     <MAP3D v-show="tag === 2" />
+    <Three v-show="tag === 2" />
     <SwitchMap />
     <Tools />
   </div>
@@ -11,12 +12,13 @@ import { mapState } from 'vuex'
 // import main from '~/static/mapjs/main'
 import MAP2D from '~/components/map/Map2D.vue'
 import MAP3D from '~/components/map/Map3D.vue'
+import Three from '~/components/map/Three.vue'
 import SwitchMap from '~/components/map/Switch.vue'
 import Tools from '~/components/map/Tools.vue'
 
 export default {
   components: {
-    MAP2D, MAP3D, SwitchMap, Tools
+    MAP2D, MAP3D, Three, SwitchMap, Tools
   },
   data () {
     return {
