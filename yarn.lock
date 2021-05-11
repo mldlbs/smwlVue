@@ -5952,9 +5952,9 @@ hoopy@^0.1.4:
   integrity sha512-HRcs+2mr52W0K+x8RzcLzuPPmVIKMSv97RGHy0Ea9y/mpcaK+xTrjICA04KAHi4GRzxliNqNJEFYWHghy3rSfQ==
 
 hosted-git-info@^2.1.4:
-  version "2.8.5"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.5.tgz#759cfcf2c4d156ade59b0b2dfabddc42a6b9c70c"
-  integrity sha512-kssjab8CvdXfcXMXVcvsXum4Hwdq9XGtRD3TteMEvEbq0LXyiNQr6AprqKqfeaDXze7SxWvRxdpwE6ku7ikLkg==
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
+  integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
 hsl-regex@^1.0.0:
   version "1.0.0"
@@ -7182,11 +7182,6 @@ launch-editor@^2.2.1:
   dependencies:
     chalk "^2.3.0"
     shell-quote "^1.6.1"
-
-leaflet.chinatmsproviders@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/leaflet.chinatmsproviders/-/leaflet.chinatmsproviders-2.0.3.tgz#352988a44f4b6ba167f3bde1ea0e3ff280cc28e3"
-  integrity sha512-dB9SI3Y/W2IB1TRdyeYU286EDMW4MwH5n89xv9Q0DtzKqMyul13p9sOLYRurCbFKYgBcTYQPq71Q4hbvdFHtQg==
 
 leaflet@1.5.1:
   version "1.5.1"
