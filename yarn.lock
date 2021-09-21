@@ -7183,11 +7183,6 @@ launch-editor@^2.2.1:
     chalk "^2.3.0"
     shell-quote "^1.6.1"
 
-leaflet.chinatmsproviders@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/leaflet.chinatmsproviders/-/leaflet.chinatmsproviders-2.0.3.tgz#352988a44f4b6ba167f3bde1ea0e3ff280cc28e3"
-  integrity sha512-dB9SI3Y/W2IB1TRdyeYU286EDMW4MwH5n89xv9Q0DtzKqMyul13p9sOLYRurCbFKYgBcTYQPq71Q4hbvdFHtQg==
-
 leaflet@1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.5.1.tgz#9afb9d963d66c870066b1342e7a06f92840f46bf"
@@ -10703,9 +10698,9 @@ tmp@^0.0.33:
     os-tmpdir "~1.0.2"
 
 tmpl@1.0.x:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
-  integrity sha1-I2QN17QtAEM5ERQIIOXPRA5SHdE=
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
+  integrity sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
